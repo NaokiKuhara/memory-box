@@ -1,0 +1,30 @@
+
+<div class="form_wrapper user_edit_page">
+<h2 class="page-title">投稿編集</h2>
+<%= form_tag("/posts/#{@post.id}/update", {multipart: true}) do %>
+
+    <div class="field">
+        <% if @post.errors.any? %>
+            <% @post.errors.full_messages.each do |message| %>
+                <div class="error-message">
+                    <%= message %>
+                </div>
+            <% end %>
+        <% end %>
+    <p>タイトル</p>
+    <input name="title" value="<%= @post.title %>" class="text-field">
+    </div>
+
+    <div class="field">
+    <p>テキスト</p>
+    <textarea name="body" class="text-field posts-text-field"><%= @post.body %></textarea>
+    </div>
+
+    <div class="field">
+    <p>画像</p>
+    <input name="image" type="file">
+    </div>
+
+    <input type="submit" value="更新" class="btn posts-btn">
+<% end %>
+</div>

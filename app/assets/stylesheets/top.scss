@@ -1,0 +1,210 @@
+.top-title {
+    color: white;
+    line-height: 80px;
+    font-size: 32px;
+    margin-left: 50px;
+    text-decoration: none;
+    font-family: cursive;
+}
+
+.top-box {
+    background-color: rgb(101, 161, 230);
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navber {
+    width: 1000px;
+    display: flex;
+    justify-content: flex-end;
+    li {
+        font-size: 20px;
+        margin-right: 50px;
+        border: 1px solid rgb(233, 233, 233);
+        border-radius: 3px;
+        height: 40px;
+        margin-top: 20px;
+        padding: 10px;
+        .nav_text {
+            color: white;
+            text-decoration: none;
+        }
+    }
+}
+
+.top-main {
+    text-align: center;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    min-height: 100vh;
+    color: white;
+    background-color: #3ecdc6;
+    background-repeat: no-repeat;
+    background-position: center 50%;
+    background-size: cover;
+    background-image: url("/photo.jpg");
+    z-index: -1;
+
+    h2 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 80px;
+        font-weight: 500;
+        line-height: 2.5;
+        -webkit-font-smoothing: antialiased;
+    }
+}
+
+
+/*=====================
+ユーザー一覧
+=====================*/
+.user-list-title {
+    color: white;
+    line-height: 100px;
+    font-size: 28px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.user-list-box {
+    background-color: #e49273;
+    height: 100px;
+    width: 100%;
+}
+
+.user-list {
+    width: 900px;
+    margin: 100px auto 0;
+    .user-info {
+        width: 900px;
+        height: 120px;
+        box-shadow: 0 2px 6px #adc8e6;
+        border-radius: 3px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: flex-start;
+        .image-photo {
+            border-radius: 40%;
+            width: 100px;
+            height: 100px;
+            margin-left: 60px;
+            margin-top: 10px;
+        }
+        .userName {
+            text-decoration: none;
+            color: rgb(0, 68, 255);
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 120px;
+            margin-left: 60px;
+        }
+        p {
+            line-height: 120px;
+            padding-left: 100px;
+        }
+    }
+}
+
+/*=====================
+ユーザー詳細
+=====================*/
+.show-image {
+    width: 250px;
+}
+
+.show_wrapper {
+    width: 600px;
+    margin: 60px auto;
+    display: flex;
+    justify-content: center;
+    .show-box {
+        flex-direction: column;
+        text-align: center;
+        font-size: 24px;
+        font-weight: 600;
+        .show-image-box {
+            margin-bottom: 30px;
+        }
+        .show-username-box {
+            margin-bottom: 10px;
+        }
+        .show_email_box {
+            margin-bottom: 30px;
+        }
+        .show-edit-box {
+            width: auto;
+        }
+        .show_edit {
+            color: white;
+            text-decoration: none;
+            display: block;
+        }
+    }
+}
+
+///////////  ユーザーの投稿一覧
+.user-posts-show{
+    margin: 50px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    .user-posts-item{
+        width: 500px;
+        box-shadow: 0 2px 6px #8d8e8f;
+        margin: 0 40px 50px;
+        .user-posts-image{
+            img{
+                width: 100%;
+                height: 420px;
+            }
+        }
+
+        .posts-posts-text-box{
+            width: 100%;
+            margin: 20px 30px;
+            display: flex;
+            flex-direction: column;
+            font-size: 18px;
+            time{
+                margin-top: 30px;
+            }
+        }
+    }
+}
+.under-none{
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    border-bottom: rgba(121, 121, 121, 0.561) 1px solid;
+    width: 90%;
+    padding: 20px 10px 15px;
+    &:hover{
+        background-color: #CDCCCD;
+    }
+}
+
+/*=====================
+ユーザー編集
+=====================*/
+.user_edit_page,
+.box_shadow {
+    padding: 70px 80px;
+    box-shadow: 0 2px 6px #8d8e8f;
+}
+.edit_image_name,
+.border-none {
+    border: 0px;
+}
+
+.new-user-top-page{
+    padding: 70px 80px 30px;
+    margin-bottom: 50px;
+}

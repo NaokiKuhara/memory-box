@@ -1,0 +1,41 @@
+<div class="user-list-box">
+    <h1 class="user-list-title">ユーザー詳細</h1>
+</div>
+
+<div class="show_wrapper">
+    <div class="show-box">
+        <div class="show-image-box">
+            <img src="<%= "/assets/name#{@user.id}.jpg" %>" class="show-image" > 
+        </div>
+        <div class="show-username-box">
+            <%= @user.username %>
+        </div>
+        <% if @user.id == current_user.id %>
+            <div class="show_email_box">
+                <%= @user.email %>
+            </div>
+            <div class="show-edit-box btn">
+                <%= link_to "編集", edit_user_path(@user),class:"show_edit" %>
+            </div>
+        <% end %>
+    </div>
+</div>
+
+<div class="user-posts-show">
+<% @user.posts.each do |post| %>
+<div class="user-posts-item">
+    <div class="user-posts-image">
+    <img src="<%= "/user_images/#{post.image_name}" %>" >
+    </div>
+
+    <div class="posts-posts-text-box">
+            <%= link_to "この思い出を見る", post_path(post), class: "under-none" %>
+            <% if @user.id == current_user.id %>
+                <%= link_to "この記事を編集する", edit_post_path(post), class: "under-none" %>
+                <%= link_to "この記事を削除する", post_path(post), method: :delete, data: {confirm: "本当に削除しますか？"}, class: "under-none" %>
+            <% end %>
+            <time>更新日時:<%= post.updated_at.strftime("%Y-%m-%d %H:%M") %></time>
+    </div>
+</div>
+<% end %>
+</div>

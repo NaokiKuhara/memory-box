@@ -1,0 +1,30 @@
+<%# <div class="user-list-box">
+    <h1 class="user-list-title">編集ページ</h1>
+</div> %>
+
+<div class="form_wrapper user_edit_page">
+<h2 class="page-title">アカウント編集</h2>
+<%= form_for @user, {multipart: true} do |f| %>
+
+    <div class="field">
+        <% if @user.errors.any? %>
+            <% @user.errors.full_messages.each do |message| %>
+                <div class="error-message">
+                    <%= message %>
+                </div>
+            <% end %>
+        <% end %>
+        <%= f.label :username %>
+        <%= f.text_field :username, class: "text-field" %>
+    </div>
+    <div class="field">
+        <%= f.label :email %>
+        <%= f.text_field :email, class: "text-field" %>
+    </div>
+    <div class="field">
+        <%# <%= f.label :image_name %> 
+        <%# <%= f.file_field :image_name, class: "text-field edit_image_name" %> 
+    </div>
+        <%= f.submit "更新", class: "btn" %>
+<% end %>
+</div>

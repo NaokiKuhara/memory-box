@@ -1,0 +1,143 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*=====================
+共通パーツ
+=====================*/
+.btn {
+    width: 100px;
+    border: solid 1px;
+    border-radius: 5px;
+    background-color: #0fad31;
+    padding: 5px;
+    line-height: 40px;
+    color: white;
+    font-size: 24px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.notice {
+    padding: 15px 0;
+    color: white;
+    background: rgb(251, 170, 88);
+    text-align: center;
+    // position: absolute;
+    // top: 64px;
+    // z-index: 10;
+    width: 100%;
+    border-radius: 0 0 2px 2px;
+    font-size: 14px;
+}
+
+
+.error-message{
+    color: tomato;
+}
+
+/*=====================
+投稿詳細
+=====================*/
+.posts-show-wrapper {
+    width: 700px;
+    margin: 30px auto 50px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 2px 6px #8d8e8f;
+    .posts-show-box {
+        flex-direction: column;
+        text-align: center;
+        .posts_show_image {
+            width: 700px;
+        }
+        .posts_text_box {
+            padding: 40px 25px;
+            text-align: left;
+
+            .posts_show_title {
+                font-size: 20px;
+                font-weight: 700;
+                margin-bottom: 20px;
+            }
+            .posts-show-text {
+                line-height: 20px;
+                margin-bottom: 20px;
+            }
+            .success-btn {
+                text-decoration: none;
+                font-size: 16px;
+                padding: 5px 10px;
+            }
+        }
+    }
+}
+
+.post-show-user-page {
+    width: 300px;
+    margin-top: 50px;
+    box-shadow: 0 2px 6px #8d8e8f;
+    padding: 20px 30px;
+    position: absolute;
+    right: 10%;
+    border-radius: 7px;
+    background-color: #ef6461;
+
+    .post-show-username {
+        text-decoration: none;
+        font-size: 16px;
+        color: #fff;
+        display: block;
+        font-weight: 600;
+    }
+}
+
+/*=====================
+投稿編集
+=====================*/
+.posts-btn {
+    font-size: 16px;
+    padding: 5px 10px;
+    width: 80px;
+    line-height: 30px;
+}
+.posts-text-field {
+    padding: 20px 5px;
+}
+
+/*=====================
+投稿一覧
+=====================*/
+.posts-index {
+    margin: 50px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    .posts-index-item {
+        width: 500px;
+        box-shadow: 0 2px 6px #8d8e8f;
+        margin: 0 40px 50px;
+
+        .posts-index-image {
+            img {
+                width: 100%;
+                height: 420px;
+            }
+        }
+        .posts-index-text-box {
+            width: 100%;
+            margin: 20px 30px;
+            flex-direction: column;
+            font-size: 18px;
+            .posts{
+                display: flex;
+                margin-bottom: 20px;
+                h2{
+                    margin-left: 20px;
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+}

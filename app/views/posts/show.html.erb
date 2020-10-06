@@ -1,0 +1,35 @@
+<div class="user-list-box">
+    <h1 class="user-list-title">投稿詳細</h1>
+</div>
+
+<div class="post-show-user-page">
+    <%= link_to user_path(@post.user), class:"post-show-username" do %>
+        <%= @post.user.username %>さんのページへ
+    <% end %>
+</div>
+
+<div class="posts-show-wrapper">
+    <div class="posts-show-box">
+        <div class="show-image-box">
+            <img src="<%= "/user_images/#{@post.image_name}" %>" class="posts_show_image">
+        </div>
+
+        <div class="posts_text_box">
+            <div class="posts_show_title">
+                    <%= @post.title %>
+            </div>
+
+            <div class="posts-show-text">
+                <%= @post.body %>
+            </div>
+            <% if @post.user.id == current_user.id %>
+            <%= link_to "編集", edit_post_path(@post), class:"btn success-btn" %>
+            <% end %>
+        </div>
+    </div>
+</div>
+   
+
+
+
+

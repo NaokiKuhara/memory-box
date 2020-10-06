@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyApp</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="top-box">
+      <%= link_to "MemoryBox", root_path, class: "top-title" %>
+      <ul class="navber">
+        <% if user_signed_in? %>
+            <li>
+                <%= link_to "マイページ", user_path(current_user), class: "nav_text" %>
+            </li>
+            <li>
+                <%= link_to "ユーザー一覧", users_path, class: "nav_text" %>
+            </li>
+            <li>
+                <%= link_to "思い出一覧", posts_path, class: "nav_text" %>
+            </li>
+            <li>
+                <%= link_to "新規投稿", new_post_path, class: "nav_text" %>
+            </li>
+            <li>
+                <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "nav_text" %>
+            </li>
+        <% else %>
+            <li>
+                <%= link_to "投稿一覧", posts_path, class: "nav_text" %>
+            </li>
+            <li>
+                <%= link_to "ログイン",  new_user_session_path, class: "nav_text" %>
+            </li>
+            <li>
+                <%= link_to "新規登録", new_user_registration_path, class: "nav_text" %>
+            </li>
+        <% end %>
+      </ul>
+    </div>
+    <% if flash[:notice] %>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+    <% end %>
+    <%= yield %>
+  </body>
+</html>

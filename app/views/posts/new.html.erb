@@ -1,0 +1,33 @@
+
+<div class="form_wrapper box_shadow">
+<h2 class="page-title">新規投稿</h2>
+
+
+
+    <%= form_tag("/posts") do %>
+        <div class="field">
+        <% if @post.errors.any? %>
+            <% @post.errors.full_messages.each do |message| %>
+                <div class="error-message">
+                    <%= message %>
+                </div>
+            <% end %>
+        <% end %>
+            <p>タイトル</p>
+            <input name="title" type="text" value="<%= @post.title %>" class="text-field">
+        </div>
+        <div class="field">
+            <p>テキスト</p>
+            <textarea name="body" type="text" class="text-field"><%= @post.body %></textarea>
+        </div>
+
+        <%# <div class="field">
+            <input name="image" type="file" class="text-field border-none">
+        </div> %>
+        <input type="submit" value="投稿" class="btn">
+
+
+    <% end %>
+</div>
+
+

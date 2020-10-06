@@ -1,0 +1,16 @@
+<div class="user-list-box">
+    <h1 class="user-list-title">ユーザー一覧</h1>
+</div>
+
+<div class="user-list">
+<ul>
+    <% @users.each do |user| %>
+        <li class="user-info">
+            <img src="<%= "/assets/name#{user.id}.jpg" %>" class="image-photo" > 
+            
+            <%= link_to user.username, user_path(user), class: "userName" %>
+            <p>投稿数：<%= user.posts.count %> </p>
+        </li>
+    <% end %>
+</ul>
+</div>
