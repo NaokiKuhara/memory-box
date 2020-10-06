@@ -1,24 +1,13 @@
-# README
+1.アプリケーションの概要
+　このアプリケーションは、旅行好きな私が友達と思い出を共有したいと考えたことから、登録したユーザー同士で思い出を共有できるアプリです。Instagramをイメージして制作しました。
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+2.アプリケーションで使っている技術
+  ・インフラ　→　heroku
+  ・開発環境　→　Vagrant
+  ・開発言語　→　Ruby on Rails
+  ・UI/UX　→　HTML/SCSS
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+3.アプリケーションの機能
+  ・認証機能　→　devise
+  ・文字や画像を投稿する機能
+  ・ユーザーを認識して編集や削除を制限する機能
